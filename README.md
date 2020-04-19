@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## sample
+
+### grid-basic
+  - ag-grid 的基礎使用方式
+### grid-form
+  - 將 ag-grid 作為 Form 來使用
+### grid-part-of-form
+  - ag-grid 為 Form 的一部分
+### grid-part-of-form-array
+  - ag-grid 為 Form 的一部分的 FromArray

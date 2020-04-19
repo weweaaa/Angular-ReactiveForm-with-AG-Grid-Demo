@@ -16,6 +16,7 @@ import { GridPartOfFormComponent } from './grid-part-of-form/grid-part-of-form.c
 import { GridPartOfFormArrayComponent } from './grid-part-of-form-array/grid-part-of-form-array.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GridBasicComponent } from './grid-basic/grid-basic.component';
+import { FormCellComponent } from './grid-form/form-cell/form-cell.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GridBasicComponent } from './grid-basic/grid-basic.component';
     GridFormComponent,
     GridPartOfFormComponent,
     GridPartOfFormArrayComponent,
-    GridBasicComponent
+    GridBasicComponent,
+    FormCellComponent
   ],
   imports: [
     AppRoutingModule,
