@@ -1,6 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms';
+/* Material Modules*/
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { GridFormComponent } from './grid-form/grid-form.component';
@@ -20,6 +28,12 @@ import { GridBasicComponent } from './grid-basic/grid-basic.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     AgGridModule.withComponents([])
   ],
   providers: [],
