@@ -56,7 +56,7 @@ export class GridPartOfFormArrayComponent {
     this.rowData = currentBranch.stock;
   }
 
-  private refreshFormControls() {
+  refreshFormControls() {
     if (this.api) {
       // slight chicken and egg here - the grid cells will be created before the grid is ready, but
       // we need set formGroup up front
