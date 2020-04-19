@@ -1,1 +1,64 @@
-<p>grid-part-of-form works!</p>
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
+  <mat-form-field class="dealership-field">
+    <mat-select
+      placeholder="Branch"
+      (selectionChange)="updateForm()"
+      [(value)]="selectedBranch"
+    >
+      <mat-option *ngFor="let branch of branchNames" [value]="branch">
+        {{ branch }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <form
+    class="dealership-form"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="gridForm"
+  >
+    <mat-form-field class="dealership-field">
+      <input
+        matInput
+        formControlName="salesperson"
+        placeholder="Lead Salesperson"
+      />
+    </mat-form-field>
+    <mat-form-field class="dealership-field">
+      <input
+        matInput
+        formControlName="telephone"
+        placeholder="Branch Telephone"
+        type="tel"
+      />
+    </mat-form-field>
+    <mat-form-field class="dealership-field">
+      <textarea
+        matInput
+        formControlName="address"
+        rows="4"
+        placeholder="Branch Address"
+      ></textarea>
+    </mat-form-field>
+    <ag-grid-angular
+      style="width: 700px; height: 300px;"
+      class="ag-theme-material"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [frameworkComponents]="getComponents()"
+      [context]="getContext()"
+      [getRowNodeId]="getRowNodeId"
+      (rowDataChanged)="refreshFormControls()"
+      (gridReady)="gridReady($event)"
+    >
+    </ag-grid-angular>
+    <button
+      style="margin-top: 10px; float: right;"
+      mat-raised-button
+      [disabled]="!gridForm.valid"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
