@@ -37,3 +37,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - ag-grid 為 Form 的一部分
 ### grid-part-of-form-array
   - ag-grid 為 Form 的一部分的 FromArray
+
+
+## 參考來源：
+
+- [Github - Sean Landsman](https://github.com/seanlandsman/ag-grid-ng-forms)
+- [Medium - Using Angular Forms with ag-Grid](https://medium.com/ag-grid/using-angular-forms-with-ag-grid-1efe00265535)
