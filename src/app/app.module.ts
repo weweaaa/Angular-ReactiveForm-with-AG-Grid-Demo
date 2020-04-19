@@ -22,6 +22,7 @@ import { GridPartOfFormArrayComponent } from './grid-part-of-form-array/grid-par
 import { AppRoutingModule } from './app-routing.module';
 import { GridBasicComponent } from './grid-basic/grid-basic.component';
 import { FormCellComponent } from './grid-form/form-cell/form-cell.component';
+import { FormArrayCellComponent } from './grid-part-of-form-array/form-array-cell/form-array-cell.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormCellComponent } from './grid-form/form-cell/form-cell.component';
     GridPartOfFormComponent,
     GridPartOfFormArrayComponent,
     GridBasicComponent,
-    FormCellComponent
+    FormCellComponent,
+    FormArrayCellComponent
   ],
   imports: [
     AppRoutingModule,
