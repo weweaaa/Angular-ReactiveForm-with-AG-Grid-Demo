@@ -85,7 +85,7 @@ export class GridPartOfFormArrayComponent {
     // clear out old form group controls if switching between branches
     const controlNames = Object.keys(stockGroup.controls);
     controlNames.forEach((controlName) => {
-      stockGroup.removeControl(controlName)
+      stockGroup.removeControl(controlName);
     });
 
     this.api.forEachNode((rowNode: RowNode) => {
@@ -116,7 +116,7 @@ export class GridPartOfFormArrayComponent {
     return {
       formGroup: this.gridForm.controls.stock,
       createKey: this.createKey
-    }
+    };
   }
 
   onSubmit() {

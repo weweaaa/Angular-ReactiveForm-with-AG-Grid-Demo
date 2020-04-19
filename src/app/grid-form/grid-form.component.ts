@@ -54,7 +54,7 @@ export class GridFormComponent {
   }
 
   private createFormControls() {
-    let columns = this.columnApi.getAllColumns();
+    const columns = this.columnApi.getAllColumns();
 
     this.api.forEachNode((rowNode: RowNode) => {
       columns.filter(column => column.getColDef().field !== 'orderNumber')
@@ -82,7 +82,7 @@ export class GridFormComponent {
     return {
       formGroup: this.formGroup,
       createKey: this.createKey
-    }
+    };
   }
 
   onSubmit() {

@@ -112,7 +112,7 @@ export class GridPartOfFormComponent {
     return {
       formGroup: this.gridForm.controls.stock,
       createKey: this.createKey
-    }
+    };
   }
 
   onSubmit() {
