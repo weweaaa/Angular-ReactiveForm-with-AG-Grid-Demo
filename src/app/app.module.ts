@@ -12,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 /* Flex */
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
@@ -23,6 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { GridBasicComponent } from './grid-basic/grid-basic.component';
 import { FormCellComponent } from './grid-form/form-cell/form-cell.component';
 import { FormArrayCellComponent } from './grid-part-of-form-array/form-array-cell/form-array-cell.component';
+import { GridEditDropdownlistComponent } from './grid-edit-dropdownlist/grid-edit-dropdownlist.component';
+import { DropDownListCellEditComponent } from './grid-edit-dropdownlist/drop-down-list-cell-edit/drop-down-list-cell-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FormArrayCellComponent } from './grid-part-of-form-array/form-array-cel
     GridPartOfFormArrayComponent,
     GridBasicComponent,
     FormCellComponent,
-    FormArrayCellComponent
+    FormArrayCellComponent,
+    GridEditDropdownlistComponent,
+    DropDownListCellEditComponent
   ],
   imports: [
     AppRoutingModule,
@@ -46,7 +50,7 @@ import { FormArrayCellComponent } from './grid-part-of-form-array/form-array-cel
     MatSelectModule,
     FlexLayoutModule,
 
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([DropDownListCellEditComponent])
   ],
   providers: [],
   bootstrap: [AppComponent]

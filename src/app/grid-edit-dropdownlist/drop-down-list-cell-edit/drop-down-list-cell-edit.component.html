@@ -1,0 +1,24 @@
+<div
+  class="ag-popup-editor ag-ltr ag-popup-child ag-keyboard-focus"
+  tabindex="-1"
+>
+  <div
+    class="ag-rich-select"
+    tabindex="0"
+    style="height: auto; width: 100%; min-width: 200px;"
+  >
+    <select
+      class="custom-select form-control"
+      style="width: 100%; margin: 0;"
+      #selectRef
+      (focus)="onSelectFocus()"
+      (change)="onSelectChange()"
+      (blur)="onSelectBlur()"
+      [value]="value"
+    >
+      <option *ngFor="let item of dropdownData" [value]="item">
+        {{ item }}
+      </option>
+    </select>
+  </div>
+</div>
