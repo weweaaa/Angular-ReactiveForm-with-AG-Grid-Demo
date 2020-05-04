@@ -37,7 +37,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - ag-grid 為 Form 的一部分
 ### grid-part-of-form-array
   - ag-grid 為 Form 的一部分的 FromArray
-
+### grid-drop-down-list-deit
+  - ag-grid 自訂編輯單元格元件 - 下拉式選單
 
 ## 參考來源：
 
