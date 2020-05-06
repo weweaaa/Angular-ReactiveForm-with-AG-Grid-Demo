@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Column, ColumnApi, GridApi, GridReadyEvent, RowNode } from 'ag-grid-community';
@@ -11,6 +11,8 @@ import { FormArrayCellComponent } from '../grid-part-of-form-array/form-array-ce
 })
 export class GridFormArrayComponent {
 
+  @Input() primekey: string;
+
   private api: GridApi;
   private columnApi: ColumnApi;
 
@@ -21,6 +23,9 @@ export class GridFormArrayComponent {
   columnDefs;
 
   constructor(public snackBar: MatSnackBar) {
+
+    // 外部設定 每筆資料的 Primekey 用
+    this.primekey = 'orderNumber';
 
     this.columnDefs = [
       { headerName: 'Order #', field: 'orderNumber', width: 110, suppressSizeToFit: true },
@@ -64,13 +69,13 @@ export class GridFormArrayComponent {
 
     this.api.forEachNode((rowNode: RowNode) => {
       const formArray: FormArray = new FormArray([]);
-      columns.filter((column: Column) => column.getColDef().field !== 'orderNumber')
+      columns.filter((column: Column) => column.getColDef().field !== this.primekey)
         .forEach((column: Column) => {
           const key = this.createKey(this.columnApi, column);
           formArray.setControl(key as any, new FormControl());
         });
 
-        this.gridForm.addControl(rowNode.id as any, formArray);
+      this.gridForm.addControl(rowNode.id as any, formArray);
     });
   }
 
