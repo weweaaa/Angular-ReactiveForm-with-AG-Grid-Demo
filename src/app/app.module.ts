@@ -25,6 +25,7 @@ import { FormCellComponent } from './grid-form/form-cell/form-cell.component';
 import { FormArrayCellComponent } from './grid-part-of-form-array/form-array-cell/form-array-cell.component';
 import { GridEditDropdownlistComponent } from './grid-edit-dropdownlist/grid-edit-dropdownlist.component';
 import { DropDownListCellEditComponent } from './grid-edit-dropdownlist/drop-down-list-cell-edit/drop-down-list-cell-edit.component';
+import { GridFormArrayComponent } from './grid-form-array/grid-form-array.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DropDownListCellEditComponent } from './grid-edit-dropdownlist/drop-dow
     FormCellComponent,
     FormArrayCellComponent,
     GridEditDropdownlistComponent,
-    DropDownListCellEditComponent
+    DropDownListCellEditComponent,
+    GridFormArrayComponent
   ],
   imports: [
     AppRoutingModule,

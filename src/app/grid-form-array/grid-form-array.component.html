@@ -1,0 +1,30 @@
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
+  <form
+  class="dealership-form"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="gridForm"
+    >
+    <ag-grid-angular
+      style="width: 700px; height: 300px;"
+      class="ag-theme-material"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [frameworkComponents]="getComponents()"
+      [context]="getContext()"
+      [getRowNodeId]="getRowNodeId"
+      (rowDataChanged)="refreshFormControls()"
+      (gridReady)="gridReady($event)"
+    >
+    </ag-grid-angular>
+    <button
+      style="margin-top: 10px; float: right;"
+      mat-raised-button
+      [disabled]="!gridForm.valid"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
