@@ -1,0 +1,9 @@
+<div *ngIf="formGroup" [formGroup]="formGroup">
+  <mat-form-field [floatLabel]="'never'" style="width: 90%;">
+    <input
+      matInput
+      [formControlName]="columnKey"
+      [id]="columnKey + rowId"
+    />
+  </mat-form-field>
+</div>
