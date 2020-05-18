@@ -72,13 +72,10 @@ export class GridFormArrayObjectComponent {
   }
 
   private createFormControls() {
-    const columns = this.columnApi.getAllColumns();
-
-    console.log('columns :>> ', columns);
-
-    const controlNames = Object.keys(this.gridFormArray.controls);
-
-    console.log('controlNames :>> ', controlNames);
+    // const columns = this.columnApi.getAllColumns();
+    // console.log('columns :>> ', columns);
+    // const controlNames = Object.keys(this.gridFormArray.controls);
+    // console.log('controlNames :>> ', controlNames);
 
     this.gridFormArray.clear();  // Init Grid FormArray
 
