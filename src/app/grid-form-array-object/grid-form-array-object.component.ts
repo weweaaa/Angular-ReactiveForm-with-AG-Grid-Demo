@@ -11,6 +11,8 @@ import { FormCellObjectComponent } from './form-cell-object/form-cell-object.com
 })
 export class GridFormArrayObjectComponent {
 
+  isShowTest = true;
+
   /** 資料物件 */
   rowData;
 
@@ -67,7 +69,7 @@ export class GridFormArrayObjectComponent {
   refreshFormControls() {
     if (this.api) {
       this.createFormControls();
-      this.api.refreshCells({ force: true });
+      // this.api.refreshCells({ force: true });
     }
   }
 
@@ -105,5 +107,18 @@ export class GridFormArrayObjectComponent {
       horizontalPosition: 'center',
       duration: 2000
     });
+  }
+
+  /**
+   * 如果一開始 Gird Hidden 隱藏起來，
+   * 會造成，refreshFormControls 過程異常，
+   * 此原因好像是因為 Grid 在 Hidden 狀態下，當畫面載入後，只會觸發前幾欄位甚至可能所有單元格都不會觸發 agInit
+   * 那就會造成可能只有前兩個欄位有 agInit，進而造成 refresh Cell 事件只會觸發兩個欄位
+   *
+   * 解決辦法就是將 refreshFormControls 時機點改為手動或資料表確定顯示在畫面上時候再觸發 refreshCells
+   */
+  fixgridShow() {
+    this.isShowTest = false;
+    this.api.refreshCells({ force: true });
   }
 }

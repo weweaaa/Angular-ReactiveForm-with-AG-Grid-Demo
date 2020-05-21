@@ -1,4 +1,4 @@
-<div class="container" fxLayout="column" fxLayoutAlign="start center">
+<div [hidden]="isShowTest" >
   <form
   class="dealership-form"
     fxLayout="column"
@@ -27,3 +27,7 @@
     </button>
   </form>
 </div>
+
+
+<Button (click)="isShowTest = !isShowTest">Hidden 踩雷測試</Button>
+<Button (click)="fixgridShow()">解決踩雷做法 Grid 資料顯示正常</Button>
